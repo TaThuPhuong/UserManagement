@@ -1,0 +1,63 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="statisticItem"
+            type="com.ttp.usermanagement.data.model.StatisticItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_out_line_4"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
+        android:weightSum="10">
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="3dp"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsMedium
+            android:id="@+id/tv_role_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center|start"
+            android:paddingVertical="3dp"
+            android:text="@{statisticItem.roleName}"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_role_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center|end"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="3dp"
+            android:text="@{String.valueOf(statisticItem.maleCount)}"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_role_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center|end"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="3dp"
+            android:text="@{String.valueOf(statisticItem.femaleCount)}"
+            android:textSize="15sp" />
+    </LinearLayout>
+</layout>

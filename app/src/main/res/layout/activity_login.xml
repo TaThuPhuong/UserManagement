@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.login.LoginActivity">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsSemiBold
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ed_userId"
+            android:layout_centerHorizontal="true"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ed_userId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ed_pass"
+            android:layout_marginTop="40dp"
+            android:focusable="true"
+            android:hint="@string/user_id"
+            android:paddingHorizontal="25dp"
+            app:boxStrokeColor="@color/gray_medium"
+            app:boxStrokeErrorColor="@color/red_FF444C"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red_FF444C"
+            app:hintTextColor="@color/gray_medium"
+            app:startIconDrawable="@drawable/ic_person_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="8" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ed_pass"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="@string/pass"
+            android:paddingHorizontal="25dp"
+            app:boxStrokeColor="@color/gray_medium"
+            app:boxStrokeErrorColor="@color/red_FF444C"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red_FF444C"
+            app:hintTextColor="@color/gray_medium"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="8" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsMedium
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/ed_pass"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/btn_login"
+            android:layout_marginHorizontal="110dp"
+            android:layout_marginTop="26dp"
+            android:background="@color/gray_primary" />
+
+    </RelativeLayout>
+
+</layout>

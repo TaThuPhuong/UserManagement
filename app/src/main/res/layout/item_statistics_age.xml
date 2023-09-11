@@ -1,0 +1,78 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="statisticItem"
+            type="com.ttp.usermanagement.data.model.StatisticItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_out_line_4"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="1dp"
+        android:weightSum="14">
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:paddingVertical="3dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="1dp"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsMedium
+            android:id="@+id/tv_role_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center|start"
+            android:paddingVertical="3dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="1dp"
+            android:text="@{statisticItem.roleName}"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/age_0_19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="@{String.valueOf(statisticItem.age0to19Count)}"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/age_20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text="@{String.valueOf(statisticItem.age20PlusCount)}"
+            android:textSize="15sp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/age_none"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="3dp"
+            android:text="@{String.valueOf(statisticItem.ageUnknownCount)}"
+            android:textSize="15sp" />
+    </LinearLayout>
+</layout>

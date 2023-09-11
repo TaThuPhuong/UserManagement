@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">UserManagement</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_list">Danh Sách</string>
+    <string name="menu_statistics">Thống kê</string>
+    <string name="menu_log_out">Đăng xuất</string>
+
+    <string name="user_id">Tên đăng nhập</string>
+    <string name="pass">Mật khẩu</string>
+    <string name="family_name">Họ</string>
+    <string name="name">Tên</string>
+    <string name="age">Tuổi</string>
+
+    <string name="login">Đăng nhập</string>
+    <string name="dang_nhap_that_bai">Đăng nhập thất bại</string>
+    <string name="re_login">Vui lòng đăng nhập lại!!</string>
+
+    <string name="login_err">Tài khoản đăng nhập không đúng.
+ Vui lòng kiểm tra lại Tên đăng nhập và Mật khẩu</string>
+
+    <string name="emty_err">chưa được nhập</string>
+    <string name="length_err">không quá %d ký tự</string>
+
+    <string name="is_admin">Người Quản Lý :</string>
+    <string name="gender">Giới tính</string>
+    <string name="select_gender">-- Chọn Giới Tính --</string>
+    <string name="select_role">-- Chọn Chức Vụ --</string>
+    <string name="register">Đăng kí</string>
+    <string name="role">Chức vụ</string>
+    <string name="emty_gender">* Vui lòng chọn giới tính</string>
+
+    <string name="success">Xác Nhận</string>
+    <string name="cancel">Hủy</string>
+
+    <string name="register_confirm">Xác Nhận Đăng Kí?</string>
+    <string name="log_out_confirm">Xác Nhận Đăng Xuất?</string>
+    <string name="update_confirm">Xác Nhận Cập Nhật?</string>
+    <string name="no">No</string>
+    <string name="full_name">Họ tên</string>
+    <string name="empty_list">Không có kết quả tìm kiếm</string>
+
+    <string name="stt_age">Độ tuổi</string>
+    <string name="gender_male">Giới tính Nam</string>
+    <string name="gender_female">Giới tính Nữ</string>
+    <string name="_0_19">0-19</string>
+    <string name="age_20">Trên 20</string>
+    <string name="no_register">Chưa đăng kí</string>
+    <string name="detail_info">Thông tin chi tiết</string>
+    <string name="update">Cập Nhật</string>
+    <string name="delete">Xóa</string>
+    <string name="delete_confirm">Xác nhận xóa user?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

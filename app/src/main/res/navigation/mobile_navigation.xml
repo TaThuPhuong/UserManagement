@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_list">
+
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="com.ttp.usermanagement.ui.list.ListFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_nav_list_to_nav_register"
+            app:destination="@id/nav_register"
+            app:popUpTo="@id/nav_list"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_list_to_nav_statistics"
+            app:destination="@id/nav_statistics"
+            app:popUpTo="@id/nav_list"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_list_to_nav_logout4"
+            app:destination="@id/nav_logout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.ttp.usermanagement.ui.register.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/activity_register" />
+
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="com.ttp.usermanagement.ui.statistics.StatisticsFragment"
+        android:label="@string/menu_statistics"
+        tools:layout="@layout/fragment_statistics" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.ttp.usermanagement.ui.logout.LogoutFragment"
+        android:label=""
+        tools:layout="@layout/fragment_logout" />
+</navigation>

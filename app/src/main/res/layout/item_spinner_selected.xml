@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="3dp"
+    android:background="@drawable/bg_out_line_4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|top">
+
+    <com.ttp.usermanagement.common.custom.font.TextViewPoppinsMedium
+        android:id="@+id/tv_item_spn_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/imv_spn_select"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/login"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imv_spn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_drop_down" />
+
+</RelativeLayout>

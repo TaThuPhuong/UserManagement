@@ -1,0 +1,78 @@
+<!-- item_user_binding.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="isAdmin"
+            type="Boolean" />
+
+        <variable
+            name="user"
+            type="com.ttp.usermanagement.data.model.UserInfo" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_out_line_4"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:weightSum="10">
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_user_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:paddingVertical="3dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="5dp"
+            android:text="@{user.userId}"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text="@{user.fullName}" />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text='@{(isAdmin &amp;&amp; user.authorityName != null) ? user.authorityName + "*" : user.authorityName}' />
+
+        <com.ttp.usermanagement.common.custom.font.TextViewPoppinsRegular
+            android:id="@+id/tv_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:text="@{user.age != null ? String.valueOf(user.age) : ``}" />
+    </LinearLayout>
+</layout>
+
